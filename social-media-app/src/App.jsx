@@ -25,10 +25,9 @@ function App() {
       <h1>Fakebook!</h1>
       <button onClick={handleButtonclick}>Create Post</button>
       
-      <CreatePostForm onNewSubmit = {handleNewPostSubmit} />
-      {/* Feed */}
       
-     
+
+      {showPost && (<CreatePostForm onNewSubmit = {handleNewPostSubmit} />)}
       <Post  list = {posts} />
 
 
