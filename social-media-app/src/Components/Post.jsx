@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Comment from "./Comment";
 
 function Post(props) {
-    let likes = 0
+    
     const [like, setLikes] = useState(likes);
-    likes = like
+   
     return(
     <div>
         <h3>{props.content}</h3>
