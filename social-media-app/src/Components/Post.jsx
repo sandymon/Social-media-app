@@ -5,12 +5,11 @@ function Post(props) {
     
     const [like, setLikes] = useState(0);
 
-    let listPosts = props.list.map((data, index)=> {
-        return (
+    
+    return(
         <div>
-        
-            <h3>{data.title}</h3>
-            <p>{data.content}</p>
+            <h3>{props.title}</h3>
+            <p>{props.content}</p>
             <p>Likes: {like}</p>
             <button onClick={()=> setLikes(like + 1)}>like</button>
             <p>Comments:</p>
@@ -18,15 +17,6 @@ function Post(props) {
             <Comment content="This is another test comment!" />
             <Comment content="This is yet another test comment!" />
         </div>
-
-            
-        )
-    })
-   
-    return(
-    <div>
-       {listPosts}
-    </div>
 
     )
     

@@ -5,6 +5,7 @@ import './App.css'
 import Post from './Components/Post'
 import CreatePostForm from './Components/CreatePostForm'
 
+
 function App() {
   const [count, setCount] = useState(0)
   const [showPost, setShowPost] = useState(false)
@@ -28,7 +29,7 @@ function App() {
       
 
       {showPost && (<CreatePostForm onNewSubmit = {handleNewPostSubmit} />)}
-      <Post  list = {posts} />
+      
 
 
 
