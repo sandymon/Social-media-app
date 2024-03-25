@@ -31,12 +31,14 @@ function CreatePostForm(props) {
     return (
     <div>
         <form onSubmit={haddleSubmit}> 
-            <label htmlFor="title">Title</label>
+            <label htmlFor="title">Title:</label>
             <input type="text" name="title" onChange={handleTitleChange}/>
-            
-            <label htmlFor="Message">Message</label>
+            <br />
+            <br />
+            <label htmlFor="Message">Message:</label>
+            <br />
             <textarea type="textarea" name="content" onChange={handleContentChange}/>
-
+            <br />
             <input type="submit"/>
 
         </form>

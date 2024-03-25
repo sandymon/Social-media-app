@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Comment from "./Comment";
+import './css/post.css'
 
 function Post(props) {
     
