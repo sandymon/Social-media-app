@@ -1,0 +1,13 @@
+.postdiv{
+    margin: 50px;
+}
+.postlike{
+    display: inline;
+}
+
+.postdiv button{
+    text-align: center;
+   
+    margin-left: 20px;
+    color: aqua;
+}

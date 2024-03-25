@@ -24,7 +24,7 @@ function App() {
   return (
    <div>
       <h1>Fakebook!</h1>
-      <button onClick={handleButtonclick}>Create Post</button>
+      <button className='createPost' onClick={handleButtonclick}>Create Post</button>
       
       
 
