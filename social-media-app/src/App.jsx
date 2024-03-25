@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Post from './Components/Post'
 import CreatePostForm from './Components/CreatePostForm'
-
+import Feed from './Components/Feed'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,7 +29,7 @@ function App() {
       
 
       {showPost && (<CreatePostForm onNewSubmit = {handleNewPostSubmit} />)}
-      
+      <Feed  list = {posts} />
 
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Post from "./Post";
 
 
 function Feed(props) {
@@ -11,9 +11,10 @@ function Feed(props) {
     })
     
     return(
-        {listPosts}
-
+        <div>{listPosts}</div>
     )
 }
+
+export default Feed
 
 
