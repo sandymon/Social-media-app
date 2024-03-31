@@ -23,18 +23,16 @@ function Post(props) {
         if(comment === ""){
             alert="comment box is empty"
         }else{
-        setcomments([...comments, comment])
-        setcomment("")
-        console.log(comments);
+            setcomments([...comments, comment])
+            setcomment("")
         }
     }
 
     let addComments = comments.map((data, index)=>{
         return(
-            <div>
-             <span>{index + 1}</span>
+            <div >
              <Comment content = {data}/>
-             </div>
+            </div>
         )
 
     })
@@ -53,7 +51,7 @@ function Post(props) {
             <br /><input type="submit" /> <br /> <br />
             </form>)}
 
-            <div>
+            <div id="commentBox">
                 {addComments}
             </div>
             

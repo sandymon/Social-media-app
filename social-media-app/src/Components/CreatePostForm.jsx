@@ -7,12 +7,10 @@ function CreatePostForm(props) {
 
     let handleTitleChange = (event) => {
         setTitle(event.target.value)
-        console.log(event.target.value)
     }
 
     let handleContentChange= (event) => {
-        setContent(event.target.value)
-        console.log(event.target.value)
+        setContent(event.target.value) 
     }
 
     let haddleSubmit = (event) => {
@@ -31,7 +29,7 @@ function CreatePostForm(props) {
     return (
     <div>
         <form onSubmit={haddleSubmit}> 
-            <label htmlFor="title">Title:</label>
+            <label htmlFor="title">Title:</label> <br />
             <input type="text" name="title" onChange={handleTitleChange}/>
             <br />
             <br />
