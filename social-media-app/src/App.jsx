@@ -18,7 +18,7 @@ function App() {
 
   let handleNewPostSubmit = (data) => {
     setPosts([...posts, data])
-    console.log(data);
+    
   }
 
   return (

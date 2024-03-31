@@ -5,14 +5,16 @@ import './Post.css'
 function Post(props) {
     
     const [like, setLikes] = useState(0);
+    const [commentCount, setcommentCount] = useState(0);
 
     const[comment, setcomment] = useState("")
 
     const [comments, setcomments] = useState([]);
-    const [showcommentB,setshowcommentB] = useState(false)
+    const [showcommentTextBox,setshowcommentTextBox] = useState(false)
+    const [showcommentBox,setshowcommentBox] = useState(false)
 
     let handleAddComment = ()=>{
-        setshowcommentB(true)
+        setshowcommentTextBox(true)
     }
 
     let handleCommentChange = (data)=>{
@@ -24,7 +26,9 @@ function Post(props) {
             alert="comment box is empty"
         }else{
             setcomments([...comments, comment])
+            setcommentCount(commentCount + 1)
             setcomment("")
+            setshowcommentTextBox(false)
         }
     }
 
@@ -42,18 +46,25 @@ function Post(props) {
             <p className="post">{props.content}</p>
             <p className="postlike"> Likes: {like}</p>
             <button className="postlike button"  onClick={()=> setLikes(like + 1)}>like</button>
-            <p>Comments:
-                              
-                 <button onClick={handleAddComment} >add comment</button></p>
+            <p>Comments: {commentCount}<button onClick={handleAddComment} >add comment</button></p>
+
+            <button className="postlike button"  onClick={()=> setshowcommentBox(!showcommentBox)}>
+                {showcommentBox ? "Hide Comments" : "Show Comments"}
+            </button>
+
+            <br />
+            <br />
             
-            {showcommentB &&(<form onSubmit={handleCommentSubmision}> 
+            {showcommentTextBox &&(<form onSubmit={handleCommentSubmision}> 
             <textarea type="text" name = "comment" placeholder="write your comment" onChange={handleCommentChange}/> 
             <br /><input type="submit" /> <br /> <br />
             </form>)}
 
-            <div id="commentBox">
+
+
+            {showcommentBox &&(<div className="commentBox">
                 {addComments}
-            </div>
+            </div>)}
             
         </div>
 
